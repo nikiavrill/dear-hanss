@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untuk Hanss</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      background-image: url('bg-fotoku.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    h1 {
+      color: #ff69b4;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px #fff;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 10px auto;
+      padding: 0 10px;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+    }
+    input, button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff85c1;
+    }
+    #balasan {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #008000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selamat Datang, Hanss 💌</h1>
+  <p>selamat datang pada 20 hanss</p>
+  <p>doa yang ku langitkan masih selalu sama,</p>
+  <p>semoga kebaikan dan kebahagiaan selalu memelukmu yaa</p>
+  <p>sejuta sayang untukmu hantuu xoxo</p>
+
+  <input type="text" id="inputBalasan" placeholder="Tulis balasanmu di sini..." />
+  <br>
+  <button onclick="beriBalasan()">Kirim Balasan 🎉</button>
+  <p id="balasan"></p>
+
+  <iframe width="0" height="0" style="display:none;" 
+    src="https://www.youtube.com/embed/CptnLrdF3_E?autoplay=1&loop=1&playlist=CptnLrdF3_E&mute=0"
+    frameborder="0"
+    allow="autoplay"
+    allowfullscreen>
+  </iframe>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    function beriBalasan() {
+      const teks = document.getElementById("inputBalasan").value.trim();
+      const tempatBalasan = document.getElementById("balasan");
+
+      if(teks === "") {
+        tempatBalasan.innerText = "Eh tulis dulu balasannya ya! 😆";
+      } else {
+        tempatBalasan.innerText = teks;
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+  </script>
+</body>
+</html>
